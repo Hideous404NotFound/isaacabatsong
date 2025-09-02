@@ -3,18 +3,17 @@ My portfolio
 # Isa'ac Abatsong - Mon Portfolio
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2F<tonpseudo>.github.io)](https://<tonpseudo>.github.io)
-[![GitHub stars](https://img.shields.io/github/stars/<tonpseudo>/<tonpseudo>.github.io?style=social)](https://github.com/<tonpseudo>/<tonpseudo>.github.io)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2F<tonpseudo>.github.io)]((https://hideous404notfound.github.io/isaacabatsong/))
 
-🌐 **Site web live :** [https://<tonpseudo>.github.io](https://<tonpseudo>.github.io)
+🌐 **Site web live :** [https://<tonpseudo>.github.io]((https://hideous404notfound.github.io/isaacabatsong/))
 
-Bienvenue sur le code source de mon portfolio personnel. Ce site présente mes compétences, mes projets et me sert de vitrine professionnelle dans le domaine du développement web.
+Bienvenue sur le code source de mon portfolio personnel. Ce site présente mes compétences, mes projets et me sert de vitrine professionnelle.
 
 ## 🚀 Technologies Utilisées
 
-*   **Front-end:** HTML5, CSS3, JavaScript (Vanilla)
+*   **Front-end:** HTML5, CSS3, JavaScript 
 *   **Hébergement:** GitHub Pages
-*   **Formulaire de Contact:** Formspree
+
 
 ## ✨ Fonctionnalités
 
@@ -38,16 +37,5 @@ C'est tout ! Aucune dépendance ou installation complexe n'est nécessaire.
 ## 📝 Licence
 
 Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
-
----
-
-### 📫 Me contacter
-
-*   **Portfolio:** [https://<tonpseudo>.github.io](https://<tonpseudo>.github.io)
-*   **Email:** [ton@email.com](mailto:ton@email.com)
-*   **LinkedIn:** [linkedin.com/in/tonprofil](https://linkedin.com/in/tonprofil)
-*   **GitHub:** [github.com/<tonpseudo>](https://github.com/<tonpseudo>)
-
----
 
 *N'hésitez pas à ⭐ star ce repo si vous le trouvez utile !*
