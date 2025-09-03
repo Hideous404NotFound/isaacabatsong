@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci ! | Ton Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <main>
+        <!-- Contenu principal -->
+        <div class="main-content">
+            <article class="about active" data-page="about">
+                <header>
+                    <h2 class="h2 article-title">Merci !</h2>
+                </header>
+
+                <section class="content-card" style="text-align: center;">
+                    <div class="icon-box" style="margin: 0 auto 20px; width: 60px; height: 60px;">
+                        <ion-icon name="checkmark-circle" style="font-size: 24px;"></ion-icon>
+                    </div>
+                    
+                    <h3 class="h3" style="margin-bottom: 15px; color: var(--orange-yellow-crayola);">
+                        Message envoyé avec succès
+                    </h3>
+                    
+                    <p class="about-text" style="margin-bottom: 25px;">
+                        Merci beaucoup pour votre message. Je vous recontacte très rapidement.
+                        En attendant, n'hésitez pas à explorer mes projets ou à me suivre sur les réseaux sociaux.
+                    </p>
+                    
+                    <div class="separator" style="margin: 30px auto; width: 50%;"></div>
+                    
+                    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                        <a href="/" class="form-btn" style="width: auto; padding: 12px 24px;">
+                            <ion-icon name="home-outline"></ion-icon>
+                            Retour à l'accueil
+                        </a>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <script>
+        // Compte à rebours pour redirection automatique après 10 secondes
+        setTimeout(function() {
+            // window.location.href = "/"; // Décommente pour activer la redirection auto
+        }, 10000);
+    </script>
+</body>
+</html>
