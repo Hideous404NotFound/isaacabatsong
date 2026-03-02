@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Lien vers ton sitemap (optionnel mais recommandé si tu en a un)
+Sitemap: https://isaacabatsong.netlify.app
