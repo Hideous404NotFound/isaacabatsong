@@ -1,5 +1,8 @@
+# Robots.txt for Isaac Abatsong
+# https://isaacabatsong.netlify.app/
 User-agent: *
 Allow: /
-
-# Lien vers ton sitemap (optionnel mais recommandé si tu en a un)
-Sitemap: https://isaacabatsong.netlify.app
+# Sitemap
+Sitemap: https://isaacabatsong.netlify.app/sitemap.xml
+# Crawl-delay (optional, for politeness)
+Crawl-delay: 1
