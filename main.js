@@ -94,6 +94,16 @@ for (let i = 0; i < filterBtn.length; i++) {
     })
 }
 
+// Theme toggle
+const themeToggle = document.querySelector('.theme-toggle');
+const themeIcon = themeToggle.querySelector('ion-icon');
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-theme');
+    const isLight = document.body.classList.contains('light-theme');
+    themeIcon.setAttribute('name', isLight ? 'sunny-outline' : 'moon-outline');
+});
+
 // Enabling Contact Form
 
 const form = document.querySelector('[data-form]');
