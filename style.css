@@ -526,6 +526,11 @@ body.light-theme .toggle-thumb {
 
 .service-icon-box { margin-bottom: 10px; }
 .service-icon-box img { margin: auto; width: 40px; height: 40px; }
+/* always color service icons yellow regardless of viewport width */
+.service-icon-box ion-icon {
+    color: var(--orange-yellow-crayola);
+    transition: color 0.2s ease;
+}
 
 .service-content-box { text-align: center; }
 .service-item-title { margin-bottom: 7px; }
@@ -1272,8 +1277,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
     .service-icon-box ion-icon {
     font-size: 40px;
-    color: var(--orange-yellow-crayola);
-    transition: color 0.2s ease;
+    /* color already set globally above, no need to redefine */
 }
 
 .service-item:hover .service-icon-box ion-icon {
