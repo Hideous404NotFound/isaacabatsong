@@ -140,3 +140,15 @@ for(let i = 0; i < navigationLinks.length; i++) {
         }
     });
 }
+
+// automatically add simple srcset attributes to every image (duplicates src so names stay unchanged)
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('img').forEach(img => {
+        if (!img.hasAttribute('srcset')) {
+            const src = img.getAttribute('src');
+            if (src) {
+                img.setAttribute('srcset', `${src} 1x, ${src} 2x`);
+            }
+        }
+    });
+});
