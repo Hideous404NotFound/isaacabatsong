@@ -152,3 +152,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Lightbox functionality
+const projectItems = document.querySelectorAll('[data-filter-item]');
+const lightboxContainer = document.querySelector('[data-lightbox-container]');
+const lightboxImg = document.querySelector('[data-lightbox-img]');
+const lightboxCloseBtn = document.querySelector('[data-lightbox-close-btn]');
+const lightboxOverlay = document.querySelector('[data-lightbox-overlay]');
+
+const toggleLightbox = function () {
+    lightboxContainer.classList.toggle('active');
+    document.body.classList.toggle('modal-open'); // Prevent scrolling if needed
+}
+
+projectItems.forEach(item => {
+    item.addEventListener('click', function (e) {
+        e.preventDefault();
+        const img = this.querySelector('img');
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        toggleLightbox();
+    });
+});
+
+lightboxCloseBtn.addEventListener('click', toggleLightbox);
+lightboxOverlay.addEventListener('click', toggleLightbox);

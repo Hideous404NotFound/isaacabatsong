@@ -1593,3 +1593,49 @@ textarea.form-input::-webkit-resizer { display: none; }
 
     .timeline-text { max-width: 700px; }
 }
+
+/* LIGHTBOX */
+[data-lightbox-container].active {
+    pointer-events: all;
+    visibility: visible;
+}
+
+.lightbox-modal {
+    position: relative;
+    background: var(--eerie-black2);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: var(--shadow5);
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: var(--transition1);
+    z-index: 2;
+}
+
+[data-lightbox-container].active .lightbox-modal {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.lightbox-img-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.lightbox-img-wrapper img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+[data-lightbox-close-btn] {
+    z-index: 10;
+}
