@@ -165,14 +165,18 @@ const toggleLightbox = function () {
     document.body.classList.toggle('modal-open'); // Prevent scrolling if needed
 }
 
-projectItems.forEach(item => {
-    item.addEventListener('click', function (e) {
+// Use event delegation for better performance and to handle dynamically added items
+document.addEventListener('click', function (e) {
+    const projectItem = e.target.closest('[data-filter-item]');
+    if (projectItem) {
         e.preventDefault();
-        const img = this.querySelector('img');
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt;
-        toggleLightbox();
-    });
+        const img = projectItem.querySelector('img');
+        if (img) {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            toggleLightbox();
+        }
+    }
 });
 
 lightboxCloseBtn.addEventListener('click', toggleLightbox);

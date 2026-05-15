@@ -1606,8 +1606,9 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding: 10px;
     border-radius: 20px;
     box-shadow: var(--shadow5);
-    max-width: 90vw;
-    max-height: 90vh;
+    width: auto;
+    max-width: 95vw;
+    max-height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1615,6 +1616,11 @@ textarea.form-input::-webkit-resizer { display: none; }
     opacity: 0;
     transition: var(--transition1);
     z-index: 2;
+}
+
+/* Ensure the overlay is dark enough */
+[data-lightbox-overlay] {
+    background: rgba(0, 0, 0, 0.9) !important;
 }
 
 [data-lightbox-container].active .lightbox-modal {
