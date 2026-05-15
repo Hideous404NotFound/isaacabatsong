@@ -278,16 +278,7 @@
                     </section>
                 </div>
 
-                <!-- Lightbox Modal -->
-                <div class="modal-container" data-lightbox-container>
-                    <div class="overlay" data-lightbox-overlay></div>
-                    <section class="lightbox-modal">
-                        <button class="modal-close-btn" data-lightbox-close-btn><ion-icon name="close-outline"></ion-icon></button>
-                        <figure class="lightbox-img-wrapper">
-                            <img src="" alt="" data-lightbox-img>
-                        </figure>
-                    </section>
-                </div>
+
 
                 <section class="clients">
                     <h3 class="h3 clients-title">Instants & Inspiration</h3>
@@ -820,6 +811,33 @@
             </article>
         </div>
     </main>
+
+    <!-- Lightbox Modal -->
+    <div class="modal-container" data-lightbox-container>
+        <div class="overlay" data-lightbox-overlay></div>
+        
+        <button class="modal-close-btn" data-lightbox-close-btn aria-label="Fermer">
+            <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <button class="nav-btn prev" data-lightbox-prev aria-label="Précédent">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+        </button>
+
+        <section class="lightbox-modal">
+            <figure class="lightbox-img-wrapper">
+                <img src="" alt="" data-lightbox-img>
+            </figure>
+            <div class="lightbox-info">
+                <h3 class="lightbox-title" data-lightbox-title></h3>
+                <p class="lightbox-category" data-lightbox-category></p>
+            </div>
+        </section>
+
+        <button class="nav-btn next" data-lightbox-next aria-label="Suivant">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+    </div>
 
     <script src="main.js"></script>
 

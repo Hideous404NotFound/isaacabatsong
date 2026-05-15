@@ -154,30 +154,72 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Lightbox functionality
-const projectItems = document.querySelectorAll('[data-filter-item]');
 const lightboxContainer = document.querySelector('[data-lightbox-container]');
 const lightboxImg = document.querySelector('[data-lightbox-img]');
+const lightboxTitle = document.querySelector('[data-lightbox-title]');
+const lightboxCategory = document.querySelector('[data-lightbox-category]');
 const lightboxCloseBtn = document.querySelector('[data-lightbox-close-btn]');
 const lightboxOverlay = document.querySelector('[data-lightbox-overlay]');
+const prevBtn = document.querySelector('[data-lightbox-prev]');
+const nextBtn = document.querySelector('[data-lightbox-next]');
+
+let currentIndex = 0;
+let visibleProjects = [];
+
+const updateLightbox = function (index) {
+    const project = visibleProjects[index];
+    const img = project.querySelector('img');
+    const title = project.querySelector('.project-title').innerText;
+    const category = project.querySelector('.project-category').innerText;
+
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxTitle.innerText = title;
+    lightboxCategory.innerText = category;
+    currentIndex = index;
+}
 
 const toggleLightbox = function () {
     lightboxContainer.classList.toggle('active');
-    document.body.classList.toggle('modal-open'); // Prevent scrolling if needed
+    document.body.classList.toggle('modal-open');
 }
 
-// Use event delegation for better performance and to handle dynamically added items
+// Use event delegation to handle clicks on project items
 document.addEventListener('click', function (e) {
     const projectItem = e.target.closest('[data-filter-item]');
     if (projectItem) {
         e.preventDefault();
-        const img = projectItem.querySelector('img');
-        if (img) {
-            lightboxImg.src = img.src;
-            lightboxImg.alt = img.alt;
+        
+        // Get all currently visible projects (filtered)
+        visibleProjects = Array.from(document.querySelectorAll('[data-filter-item].active'));
+        const index = visibleProjects.indexOf(projectItem);
+        
+        if (index !== -1) {
+            updateLightbox(index);
             toggleLightbox();
         }
     }
 });
 
+const showNext = function () {
+    currentIndex = (currentIndex + 1) % visibleProjects.length;
+    updateLightbox(currentIndex);
+}
+
+const showPrev = function () {
+    currentIndex = (currentIndex - 1 + visibleProjects.length) % visibleProjects.length;
+    updateLightbox(currentIndex);
+}
+
+nextBtn.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+prevBtn.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
 lightboxCloseBtn.addEventListener('click', toggleLightbox);
 lightboxOverlay.addEventListener('click', toggleLightbox);
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+    if (!lightboxContainer.classList.contains('active')) return;
+    if (e.key === 'Escape') toggleLightbox();
+    if (e.key === 'ArrowRight') showNext();
+    if (e.key === 'ArrowLeft') showPrev();
+});
