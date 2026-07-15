@@ -94,50 +94,76 @@ for (let i = 0; i < filterBtn.length; i++) {
     })
 }
 
-// Theme toggle
+// Theme toggle with localStorage persistence
 const themeToggle = document.querySelector('.theme-toggle');
-const themeIcon = themeToggle.querySelector('ion-icon');
+
+// (Note: The body class is also initialized inline in HTML to prevent FOUC)
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
+} else {
+    document.body.classList.remove('light-theme');
+}
 
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('light-theme');
     const isLight = document.body.classList.contains('light-theme');
-    themeIcon.setAttribute('name', isLight ? 'sunny-outline' : 'moon-outline');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
 });
 
 // Enabling Contact Form
-
 const form = document.querySelector('[data-form]');
 const formInputs = document.querySelectorAll('[data-form-input]');
 const formBtn = document.querySelector('[data-form-btn]');
 
-for(let i = 0; i < formInputs.length; i++) {
-    formInputs[i].addEventListener('input', function () {
-        if(form.checkValidity()) {
-            formBtn.removeAttribute('disabled');
-        } else { 
-            formBtn.setAttribute('disabled', '');
-        }
-    })
+// Check validity on load (in case browser autofills)
+if (form && formBtn) {
+    if (form.checkValidity()) {
+        formBtn.removeAttribute('disabled');
+    } else {
+        formBtn.setAttribute('disabled', '');
+    }
 }
 
-// Enabling Page Navigation 
+if (formInputs && formBtn) {
+    for (let i = 0; i < formInputs.length; i++) {
+        formInputs[i].addEventListener('input', function () {
+            if (form.checkValidity()) {
+                formBtn.removeAttribute('disabled');
+            } else {
+                formBtn.setAttribute('disabled', '');
+            }
+        });
+    }
+}
 
+// Enabling Page Navigation (No shadowing, modern robust logic)
 const navigationLinks = document.querySelectorAll('[data-nav-link]');
 const pages = document.querySelectorAll('[data-page]');
 
-for(let i = 0; i < navigationLinks.length; i++) {
-    navigationLinks[i].addEventListener('click', function() {
-        
-        for(let i = 0; i < pages.length; i++) {
-            if(this.innerHTML.toLowerCase() == pages[i].dataset.page) {
-                pages[i].classList.add('active');
-                navigationLinks[i].classList.add('active');
-                window.scrollTo(0, 0);
-            } else {
-                pages[i].classList.remove('active');
-                navigationLinks[i]. classList.remove('active');
-            }
-        }
+if (navigationLinks.length > 0 && pages.length > 0) {
+    navigationLinks.forEach((link) => {
+        link.addEventListener('click', function() {
+            const targetPage = this.innerHTML.trim().toLowerCase();
+            
+            pages.forEach((page) => {
+                if (page.dataset.page === targetPage) {
+                    page.classList.add('active');
+                } else {
+                    page.classList.remove('active');
+                }
+            });
+
+            navigationLinks.forEach((navLink) => {
+                if (navLink === this) {
+                    navLink.classList.add('active');
+                } else {
+                    navLink.classList.remove('active');
+                }
+            });
+
+            window.scrollTo(0, 0);
+        });
     });
 }
 

@@ -39,6 +39,11 @@
 </head>
 
 <body>
+    <script>
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-theme');
+        }
+    </script>
     <main>
         <aside class="sidebar " data-sidebar>
             <div class="sidebar-info">
@@ -54,7 +59,6 @@
                         <span class="toggle-thumb"></span>
                         <ion-icon name="moon-outline" class="icon-moon"></ion-icon>
                         <ion-icon name="sunny-outline" class="icon-sun"></ion-icon>
-                    </button>
                     </button>
                 </div>
 
@@ -863,7 +867,7 @@
 
                         <input type="hidden" name="_next" value="https://isaacabatsong.netlify.app/thanks.html">
 
-                        <button class="form-btn" type="submit" data-form-btn>
+                        <button class="form-btn" type="submit" disabled data-form-btn>
                             <ion-icon name="paper-plane"></ion-icon>
                             <span>Envoyer</span>
                         </button>

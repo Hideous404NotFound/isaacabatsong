@@ -306,14 +306,25 @@ article.active {
     font-size: 16px;
     color: var(--light-gray);
     z-index: 1;
+    transition: opacity 0.3s ease, color 0.3s ease;
 }
 
 .theme-toggle .icon-sun {
     color: #f39c12;
+    opacity: 0.3;
 }
 
 .theme-toggle .icon-moon {
     color: #f1c40f;
+    opacity: 1;
+}
+
+body.light-theme .theme-toggle .icon-sun {
+    opacity: 1;
+}
+
+body.light-theme .theme-toggle .icon-moon {
+    opacity: 0.3;
 }
 
 body.light-theme .theme-toggle {
@@ -323,7 +334,6 @@ body.light-theme .theme-toggle {
 body.light-theme .toggle-thumb {
     transform: translateX(24px);
 }
-
 /*ASIDE - SIDEBAR*/
 .sidebar {
     margin-bottom: 15px;
