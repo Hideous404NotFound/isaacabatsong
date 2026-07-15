@@ -167,6 +167,21 @@ if (navigationLinks.length > 0 && pages.length > 0) {
     });
 }
 
+// CTA button → navigate to Contact tab
+const ctaBtn = document.querySelector('[data-nav-link-cta]');
+if (ctaBtn) {
+    ctaBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        pages.forEach((page) => {
+            page.classList.toggle('active', page.dataset.page === 'contact');
+        });
+        navigationLinks.forEach((navLink) => {
+            navLink.classList.toggle('active', navLink.innerHTML.trim().toLowerCase() === 'contact');
+        });
+        window.scrollTo(0, 0);
+    });
+}
+
 // automatically add simple srcset attributes to every image (duplicates src so names stay unchanged)
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('img').forEach(img => {
