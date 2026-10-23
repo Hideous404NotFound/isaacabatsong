@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://isaacabatsong.netlify.app/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/en/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/en/projects/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/projets/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/projets/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/en/services/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/services/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/services/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/projets/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/projets/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/projects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/projets/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/services/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/services/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/services/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/a-propos/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/a-propos/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/contact/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/contact/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/en/about/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/a-propos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/a-propos/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/en/contact/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/contact/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/en/projects/eatzy-food/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/projets/eatzy-food/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/projects/eatzy-food/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/projets/eatzy-food/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/en/projects/identites-visuelles/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/projets/identites-visuelles/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/projects/identites-visuelles/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/projets/identites-visuelles/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/en/projects/istc-isare/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/projets/istc-isare/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/projects/istc-isare/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/projets/istc-isare/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/en/projects/kdo/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/projets/kdo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/projects/kdo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/projets/kdo/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/en/projects/livestock/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/projets/livestock/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/projects/livestock/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/projets/livestock/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/en/projects/nevra-sports/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/projets/nevra-sports/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/projects/nevra-sports/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/projets/nevra-sports/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/en/projects/portfolio-2026/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/projets/portfolio-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/projects/portfolio-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/projets/portfolio-2026/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/en/projects/sante-express/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/projets/sante-express/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/projects/sante-express/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/projets/sante-express/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/en/services/community-management/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/services/community-management/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/services/community-management/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/services/community-management/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/en/services/graphic-design/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/services/design-graphique/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/services/graphic-design/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/services/design-graphique/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/en/services/strategy/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/services/strategie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/services/strategy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/services/strategie/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/projets/eatzy-food/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/projets/eatzy-food/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/projects/eatzy-food/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/projets/eatzy-food/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/projets/identites-visuelles/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/projets/identites-visuelles/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/projects/identites-visuelles/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/projets/identites-visuelles/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/projets/istc-isare/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/projets/istc-isare/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/projects/istc-isare/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/projets/istc-isare/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/projets/kdo/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/projets/kdo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/projects/kdo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/projets/kdo/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/projets/livestock/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/projets/livestock/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/projects/livestock/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/projets/livestock/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/projets/nevra-sports/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/projets/nevra-sports/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/projects/nevra-sports/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/projets/nevra-sports/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/projets/portfolio-2026/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/projets/portfolio-2026/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/projects/portfolio-2026/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/projets/portfolio-2026/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/projets/sante-express/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/projets/sante-express/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/projects/sante-express/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/projets/sante-express/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/services/community-management/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/services/community-management/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/services/community-management/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/services/community-management/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/services/design-graphique/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/services/design-graphique/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/services/graphic-design/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/services/design-graphique/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/services/strategie/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/services/strategie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/services/strategy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/services/strategie/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/en/gallery/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/galerie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/galerie/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/galerie/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/galerie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/galerie/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/en/legal/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/mentions-legales/"/>
+  </url>
+  <url>
+    <loc>https://isaacabatsong.netlify.app/mentions-legales/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://isaacabatsong.netlify.app/mentions-legales/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://isaacabatsong.netlify.app/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://isaacabatsong.netlify.app/mentions-legales/"/>
+  </url>
+</urlset>

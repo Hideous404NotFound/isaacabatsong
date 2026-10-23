@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charte graphique v1 — Isaac Abatsong</title>
+  <meta name="description" content="Charte graphique v1 d'Isaac Abatsong : palette, typographie, composants et règles d'usage.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--ff-text);
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
+      -webkit-font-smoothing: antialiased;
+      background-image:
+        radial-gradient(circle at 12% 8%, rgba(255, 209, 145, 0.06), transparent 32%),
+        radial-gradient(circle at 88% 92%, rgba(178, 87, 8, 0.08), transparent 34%);
+      background-attachment: fixed;
+    }
+
+    ::selection { background: var(--gold); color: var(--ink); }
+
+    a { color: inherit; text-decoration: none; }
+
+    img { display: block; max-width: 100%; }
+
+    .wrap {
+      width: min(var(--container), calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    /* ---------- Cover ---------- */
+    .cover { padding: clamp(48px, 9vw, 120px) 0 48px; border-bottom: 1px solid var(--line); }
+
+    .eyebrow {
+      font-size: var(--fs-xs);
+      letter-spacing: var(--tracking-eyebrow);
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+      display: block;
+    }
+
+    .cover h1 {
+      font-family: var(--ff-display);
+      font-size: var(--fs-display);
+      line-height: var(--lh-display);
+      letter-spacing: var(--tracking-display);
+      font-weight: 700;
+      margin: 24px 0 20px;
+    }
+    .cover h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .cover .lead {
+      max-width: 620px;
+      color: var(--text-muted);
+      font-size: clamp(16px, 1.6vw, 19px);
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 28px;
+      margin-top: 32px;
+      font-size: var(--fs-sm);
+      color: var(--text-dim);
+    }
+    .meta-row strong { color: var(--text); font-weight: 500; }
+
+    /* ---------- Sections ---------- */
+    section { padding: var(--section-y) 0; border-bottom: 1px solid var(--line); }
+
+    .section-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: clamp(32px, 5vw, 56px);
+    }
+
+    .section-head h2 {
+      font-family: var(--ff-display);
+      font-size: var(--fs-h2);
+      line-height: var(--lh-heading);
+      letter-spacing: -0.02em;
+      font-weight: 700;
+    }
+    .section-head h2 span { color: var(--gold); }
+
+    .section-head p {
+      max-width: 380px;
+      color: var(--text-muted);
+      font-size: var(--fs-sm);
+    }
+
+    /* ---------- Direction ---------- */
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .principle {
+      background: var(--surface);
+      padding: 32px 28px;
+    }
+    .principle .num {
+      font-family: var(--ff-display);
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      margin-bottom: 40px;
+    }
+    .principle h3 {
+      font-family: var(--ff-display);
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .principle p { color: var(--text-muted); font-size: var(--fs-sm); }
+
+    /* ---------- Palette ---------- */
+    .palette {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .swatch {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--surface);
+    }
+    .swatch .chip { height: 150px; position: relative; }
+    .swatch .chip::after {
+      content: attr(data-name);
+      position: absolute;
+      bottom: 12px;
+      left: 14px;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      opacity: 0.65;
+    }
+    .swatch .info { padding: 18px 16px 20px; }
+    .swatch .hex {
+      font-family: var(--ff-display);
+      font-size: 18px;
+      letter-spacing: 0.02em;
+    }
+    .swatch .role {
+      color: var(--text-muted);
+      font-size: var(--fs-xs);
+      margin-top: 4px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 9px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--line-strong);
+      color: var(--text);
+    }
+    .badge.ok { border-color: rgba(255, 209, 145, 0.5); color: var(--gold); }
+    .badge.warn { border-color: rgba(178, 87, 8, 0.6); color: var(--gold); }
+
+    .ratio-bar {
+      display: flex;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      margin-top: 32px;
+      border: 1px solid var(--line);
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .ratio-bar span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.06em;
+    }
+    .ratio-bar .r1 { flex: 70; background: var(--ink); color: var(--paper); }
+    .ratio-bar .r2 { flex: 20; background: var(--paper); color: var(--ink); }
+    .ratio-bar .r3 { flex: 8; background: var(--gold); color: var(--ink); }
+    .ratio-bar .r4 { flex: 2; background: var(--rust); color: var(--paper); }
+
+    /* ---------- Typo ---------- */
+    .type-specimen { display: grid; gap: 36px; }
+    .type-row {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 24px;
+      align-items: baseline;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--line);
+    }
+    .type-row:last-child { border-bottom: 0; padding-bottom: 0; }
+    .type-label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+    .spec-display {
+      font-family: var(--ff-display);
+      font-size: clamp(40px, 6vw, 84px);
+      line-height: 0.98;
+      letter-spacing: var(--tracking-display);
+      font-weight: 700;
+    }
+    .spec-h2 {
+      font-family: var(--ff-display);
+      font-size: var(--fs-h2);
+      line-height: 1.05;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .spec-h3 { font-family: var(--ff-display); font-size: 26px; font-weight: 600; }
+    .spec-body { max-width: 620px; color: var(--text-muted); }
+    .spec-body strong { color: var(--text); font-weight: 600; }
+
+    /* ---------- Composants ---------- */
+    .components {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+    .panel h3 {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 22px;
+      font-weight: 600;
+    }
+    .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 13px 22px;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform var(--fast) var(--ease), background var(--fast) var(--ease), color var(--fast) var(--ease);
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--gold); color: var(--ink); }
+    .btn-primary:hover { background: #FFE3BC; }
+    .btn-secondary { border-color: var(--line-strong); color: var(--text); background: transparent; }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-rust { background: var(--rust); color: var(--paper); }
+    .btn-rust:hover { background: #8F4505; }
+    .btn-link {
+      color: var(--gold);
+      font-size: 14px;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(255, 209, 145, 0.4);
+      padding-bottom: 2px;
+      border-radius: 0;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 5px 11px;
+      border-radius: var(--radius-pill);
+      background: var(--gold-soft);
+      color: var(--gold);
+      border: 1px solid rgba(255, 209, 145, 0.22);
+    }
+    .tag.rust {
+      background: var(--rust-soft);
+      color: var(--gold);
+      border-color: rgba(178, 87, 8, 0.45);
+    }
+
+    .field {
+      width: 100%;
+      background: var(--ink);
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      color: var(--text);
+      font: inherit;
+      font-size: 15px;
+      outline: none;
+    }
+    .field::placeholder { color: var(--text-dim); }
+    .field:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(255, 209, 145, 0.14);
+    }
+
+    /* ---------- Hero mock ---------- */
+    .mock {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      overflow: hidden;
+    }
+    .mock-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 28px;
+      border-bottom: 1px solid var(--line);
+    }
+    .mock-logo {
+      font-family: var(--ff-display);
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.02em;
+    }
+    .mock-logo span { color: var(--gold); }
+    .mock-links { display: flex; gap: 24px; font-size: 13px; color: var(--text-muted); }
+    .mock-links .active { color: var(--gold); }
+
+    .mock-hero {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 32px;
+      padding: clamp(28px, 5vw, 64px);
+      align-items: center;
+    }
+    .mock-hero .eyebrow { margin-bottom: 22px; }
+    .mock-hero h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(34px, 4.6vw, 62px);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .mock-hero h2 em { font-style: normal; color: var(--gold); }
+    .mock-hero p {
+      color: var(--text-muted);
+      font-size: 15px;
+      max-width: 420px;
+      margin-bottom: 28px;
+    }
+    .mock-hero .row { gap: 10px; }
+
+    .mock-photo {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid rgba(255, 209, 145, 0.35);
+      aspect-ratio: 4 / 5;
+      background: linear-gradient(160deg, var(--rust-soft), var(--surface-2));
+    }
+    .mock-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .mock-photo::after {
+      content: "Isaac Abatsong";
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(0, 0, 0, 0.82);
+      padding: 5px 10px;
+      border-radius: var(--radius-pill);
+      backdrop-filter: blur(4px);
+    }
+
+    .mock-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      padding: 24px clamp(28px, 5vw, 64px);
+      border-top: 1px solid var(--line);
+    }
+    .mock-stats div { font-size: 12px; color: var(--text-dim); }
+    .mock-stats strong {
+      display: block;
+      font-family: var(--ff-display);
+      font-size: 24px;
+      color: var(--gold);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    /* ---------- Cartes projet ---------- */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color var(--base) var(--ease), transform var(--base) var(--ease);
+    }
+    .project-card:hover { border-color: rgba(255, 209, 145, 0.4); transform: translateY(-4px); }
+    .project-card .thumb { aspect-ratio: 4 / 5; overflow: hidden; background: var(--surface-2); }
+    .project-card .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--slow) var(--ease); }
+    .project-card:hover .thumb img { transform: scale(1.04); }
+    .project-card .body { padding: 18px; display: flex; flex-direction: column; gap: 8px; }
+    .project-card .cat {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .project-card .cat::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--rust);
+      flex: none;
+    }
+    .project-card h3 { font-family: var(--ff-display); font-size: 20px; font-weight: 600; }
+    .project-card .year { font-size: 12px; color: var(--text-dim); }
+
+    /* ---------- Thème clair ---------- */
+    .light-demo {
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: clamp(24px, 4vw, 48px);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .light-demo h3 {
+      font-family: var(--ff-display);
+      font-size: clamp(28px, 3.4vw, 44px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+    .light-demo h3 span { color: var(--accent); }
+    .light-demo p { color: var(--text-muted); font-size: 15px; margin-bottom: 24px; }
+    .light-demo .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+    .light-demo .card .tag { color: var(--accent); background: var(--gold-soft); border-color: rgba(178, 87, 8, 0.25); }
+    .light-demo .card h4 { font-family: var(--ff-display); font-size: 20px; margin: 14px 0 6px; }
+    .light-demo .card p { margin: 0; font-size: 13px; }
+
+    /* ---------- Do / Don't ---------- */
+    .dos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .do, .dont {
+      border-radius: var(--radius);
+      padding: 28px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+    .do h3, .dont h3 {
+      font-family: var(--ff-display);
+      font-size: 20px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .do h3 { color: var(--gold); }
+    .dont h3 { color: var(--text-dim); }
+    .do ul, .dont ul { list-style: none; display: grid; gap: 12px; font-size: 14px; color: var(--text-muted); }
+    .do li::before { content: "✓"; color: var(--gold); margin-right: 10px; font-weight: 700; }
+    .dont li::before { content: "✕"; color: var(--rust); margin-right: 10px; font-weight: 700; }
+
+    footer {
+      padding: 64px 0 80px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+    footer strong { color: var(--text); font-weight: 500; }
+
+    @media (max-width: 760px) {
+      .mock-hero, .light-demo { grid-template-columns: 1fr; }
+      .mock-photo { max-width: 320px; }
+      .type-row { grid-template-columns: 1fr; gap: 8px; }
+      .dos { grid-template-columns: 1fr; }
+      .mock-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+
+  <header class="cover">
+    <div class="wrap">
+      <p class="eyebrow">Charte graphique · v1 · Octobre 2026</p>
+      <h1>Noir, or chaud<br>et <em>rouille brûlée</em>.</h1>
+      <p class="lead">Une direction éditoriale, premium et chaleureuse. Le noir structure, l'or attire le regard, le rouille signale l'action. Pas de dégradés multicolores, pas de flou : des aplats, des filets fins et de la typographie.</p>
+      <div class="meta-row">
+        <span>Palette <strong>4 couleurs</strong></span>
+        <span>Typographies <strong>Syne + Plus Jakarta Sans</strong></span>
+        <span>Contraste <strong>WCAG AA vérifié</strong></span>
+        <span>Thèmes <strong>sombre + clair</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Direction <span>artistique</span></h2>
+        <p>Trois principes pour que le site ressemble à ton travail : précis, affirmé, sans bruit inutile.</p>
+      </div>
+      <div class="principles">
+        <article class="principle">
+          <div class="num">01</div>
+          <h3>Le noir comme scène</h3>
+          <p>Un fond noir profond met tes visuels en lumière. Les cartes et les surfaces se détachent par de légers aplats, jamais par du flou.</p>
+        </article>
+        <article class="principle">
+          <div class="num">02</div>
+          <h3>L'or comme signature</h3>
+          <p>Réservé aux titres, filets, chiffres et boutons principaux. C'est la couleur qu'on retient de toi.</p>
+        </article>
+        <article class="principle">
+          <div class="num">03</div>
+          <h3>Le rouille comme accent</h3>
+          <p>Petites touches : catégories, tags, états, CTA secondaires. Il réchauffe sans concurrencer l'or.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>La <span>palette</span></h2>
+        <p>Les ratios de contraste sont calculés. Chaque couleur a un rôle précis : ne pas les intervertir.</p>
+      </div>
+
+      <div class="palette">
+        <article class="swatch">
+          <div class="chip" style="background:#000000; border-bottom:1px solid rgba(255,255,255,.12);" data-name="Noir profond"></div>
+          <div class="info">
+            <div class="hex">#000000</div>
+            <div class="role">Fond principal · texte sur or</div>
+            <span class="badge ok">21:1 sur blanc · AAA</span>
+          </div>
+        </article>
+
+        <article class="swatch">
+          <div class="chip" style="background:#FFD191; color:#000;" data-name="Or chaud"></div>
+          <div class="info">
+            <div class="hex">#FFD191</div>
+            <div class="role">Accent principal · titres, filets, CTA</div>
+            <span class="badge ok">14,78:1 sur noir · AAA</span>
+          </div>
+        </article>
+
+        <article class="swatch">
+          <div class="chip" style="background:#B25708; color:#fff;" data-name="Rouille brûlée"></div>
+          <div class="info">
+            <div class="hex">#B25708</div>
+            <div class="role">Accent secondaire · tags, CTA, survols</div>
+            <span class="badge ok">4,93:1 sur blanc · AA</span>
+            <span class="badge warn">4,26:1 sur noir · grand texte / UI</span>
+          </div>
+        </article>
+
+        <article class="swatch">
+          <div class="chip" style="background:#FFFFFF; color:#000;" data-name="Blanc pur"></div>
+          <div class="info">
+            <div class="hex">#FFFFFF</div>
+            <div class="role">Texte principal · fond du thème clair</div>
+            <span class="badge ok">21:1 sur noir · AAA</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="ratio-bar" aria-label="Répartition recommandée des couleurs">
+        <span class="r1">70 % NOIR</span>
+        <span class="r2">20 % BLANC</span>
+        <span class="r3">8 % OR</span>
+        <span class="r4">2 %</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Typo<span>graphie</span></h2>
+        <p>Syne pour les titres : géométrique, affirmée, mémorable. Plus Jakarta Sans pour lire : neutre et très lisible.</p>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-row">
+          <div class="type-label">Display · Syne 700</div>
+          <div class="spec-display">Des marques<br>qu'on remarque.</div>
+        </div>
+        <div class="type-row">
+          <div class="type-label">Titre H2 · Syne 600</div>
+          <div class="spec-h2">Une identité claire change la façon dont on vous perçoit.</div>
+        </div>
+        <div class="type-row">
+          <div class="type-label">Titre H3 · Syne 600</div>
+          <div class="spec-h3">Campagne sportive — NEVRA Sports</div>
+        </div>
+        <div class="type-row">
+          <div class="type-label">Corps · Jakarta 400</div>
+          <p class="spec-body">Chaque visuel a un objectif : <strong>rendre votre marque plus claire, plus crédible et plus difficile à ignorer</strong>. Je conçois l'identité, les supports et les contenus qui portent ce message.</p>
+        </div>
+        <div class="type-row">
+          <div class="type-label">Eyebrow · 12 px</div>
+          <p class="eyebrow">Designer graphique &amp; stratège de marque</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Compo<span>sants</span></h2>
+        <p>Des règles simples, tenues partout : un seul bouton principal par écran, des filets à 12 % de blanc, des rayons discrets.</p>
+      </div>
+
+      <div class="components">
+        <article class="panel">
+          <h3>Boutons</h3>
+          <div class="row">
+            <button class="btn btn-primary">Voir mes réalisations →</button>
+            <button class="btn btn-secondary">Discutons de votre projet</button>
+            <button class="btn btn-rust">Me contacter</button>
+          </div>
+          <div class="row" style="margin-top:20px">
+            <a class="btn btn-link" href="#">Télécharger le portfolio (PDF)</a>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h3>Tags &amp; catégories</h3>
+          <div class="row">
+            <span class="tag">Identité visuelle</span>
+            <span class="tag">Print</span>
+            <span class="tag rust">Campagne</span>
+            <span class="tag rust">2026</span>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h3>Champ de formulaire</h3>
+          <input class="field" type="text" placeholder="Nom & prénom(s)" aria-label="Nom et prénom">
+          <input class="field" type="email" placeholder="Adresse e-mail" aria-label="Adresse e-mail" style="margin-top:12px">
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>En <span>situation</span></h2>
+        <p>Aperçu de la page d'accueil avec le nouveau copywriting et la palette appliquée.</p>
+      </div>
+
+      <div class="mock">
+        <div class="mock-nav">
+          <div class="mock-logo">ISAAC<span>.</span></div>
+          <div class="mock-links">
+            <span>Réalisations</span>
+            <span>Galerie</span>
+            <span>Services</span>
+            <span>À propos</span>
+            <span class="active">Contact</span>
+          </div>
+          <button class="btn btn-primary" style="padding:9px 16px; font-size:12px;">Parlons-en</button>
+        </div>
+
+        <div class="mock-hero">
+          <div>
+            <p class="eyebrow">Designer graphique &amp; stratège de marque</p>
+            <h2>Je conçois des marques<br>qu'on <em>remarque</em>.</h2>
+            <p>Identité visuelle, communication et contenus digitaux pour les ONG, startups et entreprises qui veulent être vues — et choisies. Basé à Yaoundé, disponible à distance.</p>
+            <div class="row">
+              <button class="btn btn-primary">Voir mes réalisations</button>
+              <button class="btn btn-secondary">Discutons de votre projet</button>
+            </div>
+          </div>
+          <figure class="mock-photo">
+            <img src="../images/profil/image-de-isaac-abatsong-3.png" alt="Portrait d'Isaac Abatsong">
+          </figure>
+        </div>
+
+        <div class="mock-stats">
+          <div><strong>8</strong>campagnes livrées</div>
+          <div><strong>30+</strong>visuels produits</div>
+          <div><strong>6</strong>secteurs accompagnés</div>
+          <div><strong>2024</strong>en activité depuis</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Cartes <span>projet</span></h2>
+        <p>L'image domine, le texte est court, la catégorie en or avec une pastille rouille. Le survol reste sobre.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="project-card">
+          <div class="thumb"><img src="../images/projets/campagne-sportive-NEVRA-SPORTS/Artboard16.jpg" alt="Campagne sportive NEVRA Sports"></div>
+          <div class="body">
+            <span class="cat">Campagne · Print</span>
+            <h3>NEVRA Sports</h3>
+            <span class="year">2026 · Affiches matchday</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="thumb"><img src="../images/projets/campagne-Eatzy-Food/Artboard30.jpg" alt="Campagne Eatzy Food"></div>
+          <div class="body">
+            <span class="cat">Social media</span>
+            <h3>Eatzy Food</h3>
+            <span class="year">2026 · Contenus réseaux</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="thumb"><img src="../images/projets/identites-visuelles-et-logos/identite-visuelle.webp" alt="Identité visuelle"></div>
+          <div class="body">
+            <span class="cat">Identité visuelle</span>
+            <h3>Santé Express</h3>
+            <span class="year">2025 · Logo &amp; charte</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Thème <span>clair</span></h2>
+        <p>Même système, inversé : le rouille devient l'accent lisible, l'or reste en aplat.</p>
+      </div>
+
+      <div class="light-demo" data-theme="light">
+        <div>
+          <p class="eyebrow" style="color: var(--accent)">Mode clair</p>
+          <h3>Une version claire, <span>pas une copie</span>.</h3>
+          <p>Le fond blanc repose la lecture. Le rouille prend le relais de l'or pour les liens et petits textes, car l'or sur blanc ne passe pas le contraste.</p>
+          <button class="btn btn-primary" style="background: var(--accent); color: var(--paper)">Voir la galerie</button>
+        </div>
+        <div class="card">
+          <span class="tag">Étude de cas</span>
+          <h4>Campagne NEVRA Sports</h4>
+          <p>Une série d'affiches pour remplir les tribunes, déclinée en posts et stories.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>À faire / <span>à éviter</span></h2>
+        <p>Les erreurs qui casseraient la direction en une phrase.</p>
+      </div>
+
+      <div class="dos">
+        <div class="do">
+          <h3>✓ À faire</h3>
+          <ul>
+            <li>Or pour les titres, chiffres et le CTA principal</li>
+            <li>Rouille pour les catégories, tags et petits accents</li>
+            <li>Texte blanc sur noir, noir sur or</li>
+            <li>Filets fins à 12 % de blanc pour séparer</li>
+            <li>Grandes images, beaucoup d'air autour</li>
+            <li>Un seul bouton principal visible par écran</li>
+          </ul>
+        </div>
+        <div class="dont">
+          <h3>✕ À éviter</h3>
+          <ul>
+            <li>Or sur blanc en texte (1,42:1, illisible)</li>
+            <li>Rouille en petit texte sur noir (4,26:1)</li>
+            <li>Dégradés arc-en-ciel ou ombres colorées</li>
+            <li>Glassmorphism et flous à grandes surfaces</li>
+            <li>Trois boutons de même poids côte à côte</li>
+            <li>Texte centré sur des paragraphes longs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="wrap">
+    <div>
+      <strong>Isaac Abatsong</strong><br>
+      Charte graphique v1 — à valider avant maquette.
+    </div>
+    <div>Palette : #FFD191 · #000000 · #FFFFFF · #B25708</div>
+  </footer>
+
+  </main>
+</body>
+</html>

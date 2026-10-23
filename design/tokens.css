@@ -1,0 +1,112 @@
+/* ==========================================================================
+   ISAAC ABATSG — DESIGN TOKENS v1
+   Palette : #FFD191 · #000000 · #FFFFFF · #B25708
+   Direction : éditorial chaleureux — noir profond, or chaud, rouille.
+   ========================================================================== */
+
+:root {
+  /* --- Couleurs de marque (charte) --- */
+  --gold: #FFD191;
+  --ink: #000000;
+  --paper: #FFFFFF;
+  --rust: #B25708;
+
+  /* --- Thème sombre (par défaut) --- */
+  --bg: var(--ink);
+  --surface: #0A0A0A;          /* blanc 4 % sur noir */
+  --surface-2: #111111;        /* blanc 7 % sur noir */
+  --line: rgba(255, 255, 255, 0.12);
+  --line-strong: rgba(255, 255, 255, 0.24);
+
+  --text: #FFFFFF;             /* 21:1 sur noir */
+  --text-muted: rgba(255, 255, 255, 0.64);  /* 8.3:1 */
+  --text-dim: rgba(255, 255, 255, 0.55);    /* 6.25:1 — légendes et métadonnées */
+
+  --accent: var(--gold);       /* 14.78:1 sur noir */
+  --accent-contrast: var(--ink);
+  --brand: var(--rust);        /* boutons avec texte blanc : 4.93:1 */
+  --brand-contrast: var(--paper);
+
+  --gold-soft: rgba(255, 209, 145, 0.10);
+  --rust-soft: rgba(178, 87, 8, 0.16);
+
+  /* --- Typographie --- */
+  --ff-display: 'Syne', 'Arial Black', sans-serif;
+  --ff-text: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  --fs-display: clamp(44px, 8vw, 104px);
+  --fs-h1: clamp(38px, 5.5vw, 72px);
+  --fs-h2: clamp(30px, 4vw, 52px);
+  --fs-h3: clamp(22px, 2.2vw, 30px);
+  --fs-h4: 20px;
+  --fs-body: 17px;
+  --fs-sm: 14px;
+  --fs-xs: 12px;
+
+  --lh-display: 0.96;
+  --lh-heading: 1.08;
+  --lh-body: 1.7;
+  --tracking-display: -0.03em;
+  --tracking-eyebrow: 0.18em;
+
+  /* --- Espacements --- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --section-y: clamp(64px, 9vw, 140px);
+  --container: 1200px;
+
+  /* --- Formes --- */
+  --radius-sm: 6px;
+  --radius: 14px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* --- Ombres & lumière --- */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+  --glow-gold: 0 0 0 1px rgba(255, 209, 145, 0.28), 0 12px 40px rgba(178, 87, 8, 0.18);
+
+  /* --- Mouvement --- */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --fast: 160ms;
+  --base: 260ms;
+  --slow: 520ms;
+}
+
+/* --- Thème clair : l'or passe en aplat, le rouille devient l'accent lisible --- */
+[data-theme="light"] {
+  --bg: var(--paper);
+  --surface: #FAF7F2;
+  --surface-2: #F3EDE4;
+  --line: rgba(0, 0, 0, 0.12);
+  --line-strong: rgba(0, 0, 0, 0.24);
+
+  --text: #000000;
+  --text-muted: rgba(0, 0, 0, 0.66);
+  --text-dim: rgba(0, 0, 0, 0.60);
+
+  --accent: var(--rust);       /* 4.93:1 sur blanc */
+  --accent-contrast: var(--paper);
+  --brand: var(--rust);
+
+  --gold-soft: #FFF4E2;
+  --rust-soft: #F6E4D2;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.10);
+}
+
+/* --- Respect des préférences d'accessibilité --- */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --fast: 0ms;
+    --base: 0ms;
+    --slow: 0ms;
+  }
+}

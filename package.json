@@ -1,0 +1,14 @@
+{
+  "name": "isaac-abatsong-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portfolio multi-pages d'Isaac Abatsong, graphiste et stratège de marque.",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "node serve.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.34.3"
+  }
+}
