@@ -637,25 +637,25 @@ export const projects = [
     order: 7,
     featured: false,
     year: "2025",
-    category: { fr: "Agriculture · Campagne", en: "Agriculture · Campaign" },
+    category: { fr: "E-commerce · Campagne", en: "E-commerce · Campaign" },
     client: "Livestock",
     title: { fr: "Livestock", en: "Livestock" },
     tagline: {
-      fr: "Valoriser une activité agricole avec des images concrètes et un message direct.",
-      en: "Showcasing agricultural work with concrete images and a direct message."
+      fr: "Donner du caractère à une boutique en ligne avec une campagne visuelle cohérente.",
+      en: "Giving an online store its own identity with a cohesive visual campaign."
     },
     role: {
-      fr: ["Design graphique", "Campagne", "Déclinaisons"],
-      en: ["Graphic design", "Campaign", "Variations"]
+      fr: ["Design graphique", "Campagne sociale", "Déclinaisons"],
+      en: ["Graphic design", "Social campaign", "Variations"]
     },
     description: {
       fr: [
-        "Une série de visuels pour valoriser une activité agricole et parler à un public professionnel. Des images concrètes, une typographie solide, un message qui ne tourne pas autour du pot.",
-        "Le ton reste sobre : ce qui compte, c'est le produit, le savoir-faire et la confiance."
+        "Livestock est une boutique électronique pour laquelle j'ai conçu une série de visuels à destination des réseaux sociaux. L'objectif était de mettre en avant les produits, créer du désir et renforcer la reconnaissance de la marque au fil des publications.",
+        "Chaque visuel a été pensé pour s'adapter aux différents formats (feed, stories) tout en gardant une même atmosphère, des codes graphiques identiques et un rythme visuel cohérent sur l'ensemble de la page."
       ],
       en: [
-        "A series of visuals to showcase agricultural work and speak to a professional audience. Concrete images, solid typography, a message that does not beat around the bush.",
-        "The tone stays restrained: what matters is the product, the know-how and trust."
+        "Livestock is an e-commerce store for which I designed a series of social media visuals. The goal was to highlight products, build desire and strengthen brand recognition through consistent posts.",
+        "Each visual was adapted to different formats (feed, stories) while keeping the same mood, graphic codes and visual rhythm across the entire page."
       ]
     }
   },
